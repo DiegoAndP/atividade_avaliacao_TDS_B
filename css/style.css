@@ -1,0 +1,25 @@
+@import "./canvas.css";
+@import "./main.css";
+@import "./navbar.css";
+@import "./button.css";
+@import "./filters.css";
+
+:root {
+    --primary-color: #2E6AEB;
+    --primary-monochrome: #4B556B;
+    --secondary-complementary: #EB9A2F;
+    --secondary-monochrome: #4B556B;
+    --secondary-complementary-2: #EBC82F;
+    --secondary-monochrome-2:#6B654B;
+
+    --tool-button: var(--secondary-complementary)
+    --tool-text-size: 2rem;
+    --tool-text-color: var(--secondary-complementary-2)
+}
+
+body {
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: var(--secondary-complementary);
+}
