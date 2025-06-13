@@ -1,0 +1,82 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.main__bar {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding: 2rem;
+    align-items: center;
+}
+
+.bar__option {
+    margin: 0 1rem 0 0;
+    border-radius: 2rem;
+}
+
+.bar__option input {
+    padding: 1rem;
+    font-size: larger;
+
+}
+
+.bar__option button {
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background-color: var(--secondary-complementary-2);
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-monochrome);
+}
+
+.main__column {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    box-sizing: content-box;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 20rem;
+    height: 3rem;
+    background-color: var(--secondary-complementary-2);
+}
+
+.column__tool {
+    display: flex;
+    margin: 0 1rem 0 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.tool {
+    margin: .5rem;
+    padding: 1rem;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.option__toolbar {
+    margin: 1rem 0 1rem 0;
+    display: flex;
+}
+
+.options {
+    display: flex;
+    flex-flow: column;
+    outline: 1rem;
+}
+
+.options p {
+    font-weight: bolder;
+}
