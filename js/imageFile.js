@@ -1,4 +1,4 @@
-import { context } from "../script.js"
+import { context, canvas } from "../script.js"
 export { importImage }
 
 function importImage() {
@@ -7,11 +7,31 @@ function importImage() {
     if (!file) return;
 
     const reader = new FileReader();
-    reader.onload = function(event) {
+    reader.onload = function (event) {
         const image = new Image();
-        image.onload = function() {
+        image.onload = function () {
             if (context) {
-                context.drawImage(image, 0, 0);
+            // Calculate scale to fit image within 800x800 while preserving aspect ratio
+            const maxWidth = 800;
+            const maxHeight = 800;
+            let width = image.width;
+            let height = image.height;
+
+            const widthRatio = maxWidth / width;
+            const heightRatio = maxHeight / height;
+            const scale = Math.min(widthRatio, heightRatio, 1); // Don't upscale
+
+            const drawWidth = width * scale;
+            const drawHeight = height * scale;
+
+            // Optionally clear canvas before drawing
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Center the image on the canvas
+            const x = (canvas.width - drawWidth) / 2;
+            const y = (canvas.height - drawHeight) / 2;
+
+            context.drawImage(image, x, y, drawWidth, drawHeight);
             }
         };
         image.src = event.target.result;

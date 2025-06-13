@@ -14,7 +14,10 @@
         </div>
         <div class="navbar__menu">
             <a class="navbar__item" href="#">Link 1</a>
-            <a class="navbar__item" href="#">Desenhos Salvos</a>
+            <a class="navbar__item" href="#">Primeiro Trabalho</a>
+            <a class="navbar__item" href="#">Segundo Trabalho</a>
+            <a class="navbar__item" href="#">Terceiro Trabalho</a>
+            <a class="navbar__item" href="#">Quarto Trabalho</a>
         </div>
     </nav>
     <main class="main">
@@ -26,40 +29,44 @@
                 <button data-file="import">Carregar Imagem</button>
             </div>
         </div>
-        <div class="main__column">
-            <div class="column__tool">
-                <div class="tool button">lápis</div>
-                <div class="tool button">borracha</div>
-                <div data-tool="text" class="tool button">Texto</div>
-                <div class="tool button">Limpar Tela</div>
-                <div class="tool button" id="circulo">Círculo</div>
+        <div>
+            <div class="main__column">
+                <div class="column__tool">
+                    <div class="tool button">lápis</div>
+                    <div class="tool button">borracha</div>
+                    <div data-tool="text" class="tool button">Texto</div>
+                    <div class="tool button">Limpar Tela</div>
+                    <div class="tool button" id="circulo">Círculo</div>
 
-                <!--Divisor options para cores e tamanhos do pincel-->
-                <div class="option__toolbar">
-                    <div class="options">
-                        <h3>Seletor de Cores</h3>
-                        <input type="color" name="color" id="color">
-                        <div class="options__range">
-                            <h3>Tamanho do Pincel</h3>
-                            <input type="range" min="5" name="tamanho" id="range">
-                            <p>10</p>
-                        </div>
-                        <div class="column__color_list">
-                            <span></span>
+                    <!--Divisor options para cores e tamanhos do pincel-->
+                    <div class="option__toolbar">
+                        <div class="options">
+                            <h3>Seletor de Cores</h3>
+                            <input type="color" name="color" id="color">
+                            <div class="options__range">
+                                <h3>Tamanho do Pincel</h3>
+                                <input type="range" min="5" name="tamanho" id="range">
+                                <p>10</p>
+                            </div>
+                            <div class="column__color_list">
+                                <span></span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                <div class="canvas">
-                    <canvas class="canvas__element" width="800" height="600"></canvas>
-                </div>
-                <div class="filter_container">
-                    <h3>Filtros</h3>
-                    <div class="filter_buttons">
-                        <button class="filter-button" data-filter="black_white" type="button">preto e branco</button>
-                        <button class="filter-button" data-filter="sepia" type="button">sepia</button>
-                        <button class="filter-button" data-filter="invert_color" type="button">inverter cores</button>
+                <div>
+                    <div class="canvas">
+                        <canvas class="canvas__element" width="800" height="600"></canvas>
+                    </div>
+                    <div class="filter_container">
+                        <h3>Filtros</h3>
+                        <div class="filter_buttons">
+                            <button class="filter-button" data-filter="black_white" type="button">preto e
+                                branco</button>
+                            <button class="filter-button" data-filter="sepia" type="button">sepia</button>
+                            <button class="filter-button" data-filter="invert_color" type="button">inverter
+                                cores</button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -53,6 +53,7 @@ function mousemoveDraw(ev) {
 }
 
 function erase() {
+    removeTextEvents()
     primaryColor = "rgb(255,255,255)"
 }
 
