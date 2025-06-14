@@ -3,7 +3,7 @@ import { removeTextEvents } from "./text.js";
 export { clearBoard, enableDraw, erase, changeColor, setPencilSize, removeDrawEventListeners, primaryColor, WIDTH, HEIGHT}
 
 const WIDTH = 800
-const HEIGHT = 800
+const HEIGHT = 600
 
 let isDrawing = false;
 let primaryColor = "rgb(0,0,0)"

@@ -1,5 +1,5 @@
 import { context, canvas } from "../script.js"
-export { importImage }
+export { importImage, saveImage }
 
 function importImage() {
     const fileInput = document.querySelector('[data-file="file"]');
@@ -13,7 +13,7 @@ function importImage() {
             if (context) {
             // Calculate scale to fit image within 800x800 while preserving aspect ratio
             const maxWidth = 800;
-            const maxHeight = 800;
+            const maxHeight = 600;
             let width = image.width;
             let height = image.height;
 
@@ -25,7 +25,7 @@ function importImage() {
             const drawHeight = height * scale;
 
             // Optionally clear canvas before drawing
-            context.clearRect(0, 0, canvas.width, canvas.height);
+            //context.clearRect(0, 0, canvas.width, canvas.height);
 
             // Center the image on the canvas
             const x = (canvas.width - drawWidth) / 2;
@@ -37,4 +37,12 @@ function importImage() {
         image.src = event.target.result;
     };
     reader.readAsDataURL(file);
+}
+
+function saveImage() {
+    if (context) {
+        const image = canvas.toDataURL("image/png").replace("image/url", "image/octet-stream")
+
+        window.location.href= image
+    }
 }

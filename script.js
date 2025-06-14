@@ -1,6 +1,6 @@
 import { clearBoard, enableDraw, setPencilSize, changeColor, erase } from "./js/drawfunction.js"
 import { invertColor, transformBlackAndWhite, transformSepia } from "./js/filters.js"
-import {importImage} from "./js/imageFile.js"
+import {importImage, saveImage} from "./js/imageFile.js"
 import { enableText } from "./js/text.js"
 
 
@@ -27,6 +27,7 @@ const pencil = tools[0]
 const eraser = tools[1]
 const text = document.querySelector('[data-tool="text"]')
 const cleanScreen = tools[3]
+export const save = document.querySelector('[data-filter="save"]')
 
 export const paleta = document.querySelector(".column__color_list")
 
@@ -41,6 +42,7 @@ openImage.addEventListener("click", importImage)
 blackAndWhite.addEventListener("click", transformBlackAndWhite)
 sepia.addEventListener("click", transformSepia)
 invert.addEventListener("click", invertColor)
+save.addEventListener("click", saveImage)
 
 //linha.addEventListener("click",eventTraceHandler)
 
