@@ -37,7 +37,8 @@ function mousedownDraw(ev) {
 
 function draw(ev) {
     if (isDrawing) {
-        context.fillStyle = primaryColor
+        const color = document.getElementById("color")
+        context.fillStyle = color.value
         context.fillRect(ev.offsetX, ev.offsetY, pencilSize, pencilSize);
     }
 }
@@ -53,7 +54,8 @@ function mousemoveDraw(ev) {
 }
 
 function erase() {
-    removeTextEvents()
+    enableDraw()
+    isDrawing = true
     primaryColor = "rgb(255,255,255)"
 }
 

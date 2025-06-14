@@ -41,8 +41,14 @@ function importImage() {
 
 function saveImage() {
     if (context) {
-        const image = canvas.toDataURL("image/png").replace("image/url", "image/octet-stream")
+        const image = canvas.toDataURL("image/png").replace("image/url", "image/octet-stream");
 
-        window.location.href= image
+        // Create a temporary anchor element to trigger download
+        const link = document.createElement('a');
+        link.href = image;
+        link.download = 'canvas.png';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     }
 }
