@@ -6,6 +6,7 @@ const WIDTH = 800
 const HEIGHT = 600
 
 let isDrawing = false;
+let isErasing = false;
 let primaryColor = "rgb(0,0,0)"
 let pencilSize = 10
 
@@ -15,6 +16,7 @@ function clearBoard() {
 }
 
 function enableDraw() {
+    isErasing = false
     removeTextEvents()
     canvas.addEventListener("mousedown", mousedownDraw)
     //ev.preventDefault()
@@ -30,15 +32,16 @@ function enableDraw() {
 }
 
 function mousedownDraw(ev) {
-    context.fillStyle = primaryColor
-    isDrawing = true
-    draw(ev)
+    if (context) {
+        context.fillStyle = primaryColor
+        isDrawing = true
+        draw(ev)
+    }
 }
 
 function draw(ev) {
     if (isDrawing) {
-        const color = document.getElementById("color")
-        context.fillStyle = color.value
+        context.fillStyle = isErasing ? "white" : primaryColor;
         context.fillRect(ev.offsetX, ev.offsetY, pencilSize, pencilSize);
     }
 }
@@ -54,9 +57,7 @@ function mousemoveDraw(ev) {
 }
 
 function erase() {
-    enableDraw()
-    isDrawing = true
-    primaryColor = "rgb(255,255,255)"
+    isErasing = true 
 }
 
 

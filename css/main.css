@@ -47,10 +47,10 @@
 
 .column__tool {
     display: flex;
-    margin: 0 1rem 0 0;
+    margin: 0 1rem 0 1rem;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: flex-start;
+    align-items: center;
 }
 
 .tool {
@@ -64,12 +64,18 @@
 .option__toolbar {
     margin: 1rem 0 1rem 0;
     display: flex;
+    align-items: center;
 }
 
 .options {
     display: flex;
     flex-flow: column;
     outline: 1rem;
+    align-items: center;
+}
+
+.options h3 {
+    text-align: center;
 }
 
 .options p {
