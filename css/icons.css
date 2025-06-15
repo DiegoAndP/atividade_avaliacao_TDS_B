@@ -1,0 +1,21 @@
+.pencil {
+    background-image: url("../img/icons/pencil.svg");
+}
+
+.eraser {
+    background-image: url("../img/icons/eraser.svg");
+}
+
+.clean {
+    background-image: url("../img/icons/clean.svg");
+}
+
+.text {
+    background-image: url("../img/icons/text.svg");
+}
+
+.icon-size {
+    background-position: center;
+    background-size: 2rem;
+    background-repeat: no-repeat;
+}

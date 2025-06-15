@@ -47,3 +47,11 @@ save.addEventListener("click", saveImage)
 //linha.addEventListener("click",eventTraceHandler)
 
 //enableDraw(canvas, context)
+
+document.querySelector(".navbar__item:nth-child(2)").addEventListener("mouseover", () => {
+    document.querySelector(".trabalhos__bar").style.display = "block";
+});
+
+document.querySelector("main").addEventListener("mouseover", () => {
+    document.querySelector(".trabalhos__bar").style.display = "none";
+});

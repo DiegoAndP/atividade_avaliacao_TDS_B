@@ -3,6 +3,7 @@
 @import "./navbar.css";
 @import "./button.css";
 @import "./filters.css";
+@import url("./icons.css");
 
 :root {
     --primary-color: #2E6AEB;
@@ -19,7 +20,6 @@
 
 body {
     margin: 0;
-    padding: 1rem;
     box-sizing: border-box;
     background-color: var(--secondary-complementary);
 }

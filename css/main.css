@@ -56,11 +56,9 @@
 .tool {
     margin: .5rem;
     padding: 1rem;
-    width: 5rem;
+    width: 2rem;
     height: 2rem;
-    border-radius: 2rem;
-    font-size: 1.5rem;
-    color: white;
+    border-radius: 4rem;
 }
 
 .option__toolbar {
