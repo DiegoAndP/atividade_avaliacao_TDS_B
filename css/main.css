@@ -81,3 +81,8 @@
 .options p {
     font-weight: bolder;
 }
+
+.options__range p {
+    text-align: center;
+    color: var(--secondary)
+}
