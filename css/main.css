@@ -1,8 +1,14 @@
+main {
+    margin: 1rem 10% 1rem 10%;
+
+}
+
 .main__bar {
     display: flex;
     flex-direction: row;
     align-content: center;
     padding: 2rem;
+    margin: 0 20% 0 20%;
     align-items: center;
 }
 

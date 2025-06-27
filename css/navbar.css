@@ -2,15 +2,28 @@
     padding: 1rem;
     display: flex;
     flex-direction: row;
-    height: auto;
     width: 100%;
     align-items: center;
     background-color: var(--primary-color);
-} 
+}
+
+/* .navbar__icon {
+    padding: 2.5rem;
+    margin-left: 1rem;
+    background-image: url("../img/logo_ete.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+} */
+
+.navbar__title h4 {
+    color: white;
+}
 
 .navbar__container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .trabalhos__bar {
@@ -24,6 +37,7 @@
 
 .trabalhos__list li {
     list-style:  none;
+    margin-right: 1rem;
 }
 
 .trabalhos__list a {
@@ -40,6 +54,8 @@
     text-decoration: none;
     color: white;
     padding: 1rem;
+    font-size: larger;
+    font-weight: bolder;
 }
 
 .navbar__item:hover {
